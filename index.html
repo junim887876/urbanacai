@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title data-id="th-modified">Urban Açaí</title>
+    <title data-id="th-modified">Urban Açaí Cliente</title>
     <script src="https://cdn.tailwindcss.com/"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Configurações do PWA e Web App -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4b0082">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Urban Açaí">
+    <link rel="apple-touch-icon" href="logo.jpg">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
         
@@ -881,5 +888,15 @@
 
     </script>
 
+<!-- Script de Registro do PWA -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registrado com sucesso:', reg.scope))
+                    .catch(err => console.error('Falha ao registrar o Service Worker:', err));
+            });
+        }
+    </script>
 </body>
 </html>
