@@ -1,0 +1,25 @@
+{
+  "short_name": "Urban Açaí",
+  "name": "Urban Açaí - Peça o Seu",
+  "description": "Monte o seu copo perfeito e faça seu pedido online.",
+  "icons": [
+    {
+      "src": "logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#2a004d",
+  "theme_color": "#4b0082",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "./"
+}
